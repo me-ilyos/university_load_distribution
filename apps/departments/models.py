@@ -25,4 +25,4 @@ class Department(models.Model):
         ordering = ["code"]
 
     def __str__(self):
-        return f"{self.code} - {self.name}"
+        return f"{self.code} - {self.name}" if self.name else self.code
